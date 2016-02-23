@@ -1,0 +1,17 @@
+[
+    {
+        "ID":"BKK",
+		"ZONE_ID":"1",
+		"DESCRIPTION":"ZONE TEMP1"
+    },
+    {
+        "ID":"BKK",
+		"ZONE_ID":"2",
+		"DESCRIPTION":"ZONE TEMP1"
+    },
+    {
+        "ID":"BKK",
+		"ZONE_ID":"3",
+		"DESCRIPTION":"ZONE TEMP1"
+    }
+]

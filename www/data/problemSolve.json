@@ -1,0 +1,20 @@
+[
+	{
+		"ID":"001",	"SUB_PROBLE_CAUSE_ID":"113","DESCRIPTION":"Change 2M position","PROCESS":"Y","EQUIP_RECORD":"N"
+	},
+	{
+		"ID":"002",	"SUB_PROBLE_CAUSE_ID":"113","DESCRIPTION":"Inter operator link fail","PROCESS":"N","EQUIP_RECORD":"N"
+	},
+	{
+		"ID":"003",	"SUB_PROBLE_CAUSE_ID":"113","DESCRIPTION":"Change Connector","PROCESS":"N","EQUIP_RECORD":"N"
+	},
+	{
+		"ID":"004",	"SUB_PROBLE_CAUSE_ID":"113","DESCRIPTION":"Install new tie Cable","PROCESS":"N","EQUIP_RECORD":"N"
+	},
+	{
+		"ID":"005",	"SUB_PROBLE_CAUSE_ID":"113","DESCRIPTION":"Replace unit","PROCESS":"N","EQUIP_RECORD":"Y"
+	},
+	{
+		"ID":"006",	"SUB_PROBLE_CAUSE_ID":"114","DESCRIPTION":"Inter operator link fail","PROCESS":"N","EQUIP_RECORD":"N"
+	}
+]

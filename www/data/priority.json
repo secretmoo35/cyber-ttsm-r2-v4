@@ -1,0 +1,14 @@
+[
+	{
+		"ID":"1",	"NAME":"None"
+	},
+	{
+		"ID":"2",	"NAME":"Minor"
+	},
+	{
+		"ID":"3",	"NAME":"Major"
+	},
+	{
+		"ID":"4",	"NAME":"Critical"
+	}
+]

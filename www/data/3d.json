@@ -1,0 +1,11 @@
+[
+	{
+		"ZONE_ID": "B1","DESCRIPTION":"MNM-AREA1 (Bangkok-ST2)","REGION_ID":"BKK"
+	},
+	{
+		"ZONE_ID":"B2","DESCRIPTION":"MNM-AREA2 (Bangkok-ONT)","REGION_ID":"BKK"
+	},
+	{
+		"ZONE_ID":"B3","DESCRIPTION":"MNM-AREA3 (Bangkok-TLC)","REGION_ID":"BKK"
+	}
+]

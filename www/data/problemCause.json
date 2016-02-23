@@ -1,0 +1,19 @@
+[
+	{
+		"ID":"01",	"DESCRIPTION":"Power Supply",	"STATUS":"C",	"PRIORITY":"1"
+	},
+	{
+		"ID":"02",	"DESCRIPTION":"Transmission",	"STATUS":"A",	"PRIORITY":"2"
+	},
+	{
+		"ID":"03",	"DESCRIPTION":"BTS",	"STATUS":"A",	"PRIORITY":"3"
+	},
+	{
+		"ID":"04",	"DESCRIPTION":"BSC",	"STATUS":"A",	"PRIORITY":"4"
+	},
+	{
+		"ID":"05",	"DESCRIPTION":"Activity",	"STATUS":"A",	"PRIORITY":"5"
+	}
+]
+
+

@@ -1,0 +1,32 @@
+[
+	{
+		"JB_STATUS_ID":"01",	"STATUS":"Assign"
+	},
+	{
+		"JB_STATUS_ID":"02",	"STATUS":"Accept"
+	},
+	{
+		"JB_STATUS_ID":"03",	"STATUS":"Initiate"
+	},
+	{
+		"JB_STATUS_ID":"04",	"STATUS":"On-Site"
+	},
+	{
+		"JB_STATUS_ID":"05",	"STATUS":"Report"
+	},
+	{
+		"JB_STATUS_ID":"06",	"STATUS":"Config Update"
+	},
+	{
+		"JB_STATUS_ID":"07",	"STATUS":"Reject"
+	},
+	{
+		"JB_STATUS_ID":"08",	"STATUS":"Close"
+	},
+	{	
+		"JB_STATUS_ID":"09",	"STATUS":"Transfer"
+	},
+	{	
+		"JB_STATUS_ID":"10",	"STATUS":"Report(Request more detail)"
+	}
+]

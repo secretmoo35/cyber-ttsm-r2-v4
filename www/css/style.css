@@ -1,0 +1,128 @@
+@font-face {
+	font-family: 'icon-TTSM';
+	src:url('../fonts/icon-TTSM.eot?-udm3yj');
+	src:url('../fonts/icon-TTSM.eot?#iefix-udm3yj') format('embedded-opentype'),
+		url('../fonts/icon-TTSM.ttf?-udm3yj') format('truetype'),
+		url('../fonts/icon-TTSM.woff?-udm3yj') format('woff'),
+		url('../fonts/icon-TTSM.svg?-udm3yj#icon-TTSM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="iconTTSM-"], [class*=" iconTTSM-"] {
+	font-family: 'icon-TTSM';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconTTSM-ActiveBox .path1:before {
+	content: "\e600";
+	color: rgb(35, 31, 32);
+}
+.iconTTSM-ActiveBox .path2:before {
+	content: "\e601";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.iconTTSM-ActveBoxoutline:before {
+	content: "\e602";
+}
+.iconTTSM-Inbox .path1:before {
+	content: "\e603";
+	color: rgb(35, 31, 32);
+}
+.iconTTSM-Inbox .path2:before {
+	content: "\e604";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.iconTTSM-Inboxoutline:before {
+	content: "\e605";
+}
+.iconTTSM-aissite:before {
+	content: "\e606";
+}
+.iconTTSM-alarm:before {
+	content: "\e607";
+}
+.iconTTSM-allsn:before {
+	content: "\e608";
+}
+.iconTTSM-AS:before {
+	content: "\e609";
+}
+.iconTTSM-A:before {
+	content: "\e60a";
+}
+.iconTTSM-WD:before {
+	content: "\e60b";
+}
+.iconTTSM-WR:before {
+	content: "\e60c";
+}
+.iconTTSM-O:before {
+	content: "\e60d";
+}
+.iconTTSM-I:before {
+	content: "\e60e";
+}
+.iconTTSM-cussite:before {
+	content: "\e60f";
+}
+.iconTTSM-desk-bell:before {
+	content: "\e610";
+}
+.iconTTSM-notification6:before {
+	content: "\e611";
+}
+.iconTTSM-home63:before {
+	content: "\e612";
+}
+.iconTTSM-dropZoneBKK:before {
+	content: "\e613";
+}
+.iconTTSM-dropZoneCR:before {
+	content: "\e614";
+}
+.iconTTSM-dropZoneER:before {
+	content: "\e615";
+}
+.iconTTSM-dropZoneNER:before {
+	content: "\e616";
+}
+.iconTTSM-dropZoneNONE:before {
+	content: "\e617";
+}
+.iconTTSM-dropZoneNR:before {
+	content: "\e618";
+}
+.iconTTSM-dropZoneSR:before {
+	content: "\e619";
+}
+.iconTTSM-pin66:before {
+	content: "\e61a";
+}
+.iconTTSM-compass1 .path1:before {
+	content: "\e61b";
+	color: rgb(35, 31, 32);
+}
+.iconTTSM-compass1 .path2:before {
+	content: "\e61c";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.iconTTSM-compass3:before {
+	content: "\e61d";
+}
+.iconTTSM-compass2:before {
+	content: "\e61e";
+}
+

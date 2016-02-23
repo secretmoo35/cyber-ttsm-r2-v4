@@ -1,0 +1,20 @@
+[
+	{
+		"REPORT_TYPE_ID":"01",	"REPORT_TYPE":"Solution Complete"
+	}
+	,{
+		"REPORT_TYPE_ID":"02",	"REPORT_TYPE":"Solution Not Complete"
+	},
+	{	
+		"REPORT_TYPE_ID":"03",	"REPORT_TYPE":"Solution will be Followed-up"
+	},
+	{
+		"REPORT_TYPE_ID":"04",	"REPORT_TYPE":"Visit Site and Solution Complete"
+	},
+	{
+		"REPORT_TYPE_ID":"05",	"REPORT_TYPE":"Visit Site but Solution Not Complete"
+	},
+	{
+		"REPORT_TYPE_ID":"06",	"REPORT_TYPE":"Visit Site and Solution will be Followed-up"
+	}
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "ID":"BKK",
+		"REGION_NAME_EN":"Bangkok"
+    },
+    {
+        "ID":"NER",
+		"REGION_NAME_EN":"NorthEast"
+    },
+    {
+        "ID":"CR",
+		"REGION_NAME_EN":"Central"
+    }
+]

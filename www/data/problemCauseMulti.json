@@ -1,0 +1,20 @@
+[
+	{
+		"ID":"1",	"DESCRIPTION":"Last mile network - link down",				"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"1",	"GROUP_PARENT":"0"	,"PRIORITY":""
+	},
+	{
+		"ID":"2",	"DESCRIPTION":"Last mile network - link unstable",			"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"1",	"GROUP_PARENT":"0"	,"PRIORITY":""
+	},
+	{
+		"ID":"3",	"DESCRIPTION":"Last mile network - link speed problem",		"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"1",	"GROUP_PARENT":"0"	,"PRIORITY":""	
+	},
+	{
+		"ID":"4",	"DESCRIPTION":"Distribution network - link down",			"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"2",	"GROUP_PARENT":"0"	,"PRIORITY":""
+	},
+	{
+		"ID":"5",	"DESCRIPTION":"Distribution network - link unstable",		"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"2",	"GROUP_PARENT":"0"	,"PRIORITY":""
+	},
+	{
+		"ID":"6",	"DESCRIPTION":"Distribution network - link speed problem",	"LEVEL_CAUSE":"1",	"GROUP_CAUSE":"2",	"GROUP_PARENT":"0"	,"PRIORITY":""
+	}
+]

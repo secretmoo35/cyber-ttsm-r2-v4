@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'icon-TTSM2';
+	src:url('../fonts/icon-TTSM2.eot?-tu7vpl');
+	src:url('../fonts/icon-TTSM2.eot?#iefix-tu7vpl') format('embedded-opentype'),
+		url('../fonts/icon-TTSM2.ttf?-tu7vpl') format('truetype'),
+		url('../fonts/icon-TTSM2.woff?-tu7vpl') format('woff'),
+		url('../fonts/icon-TTSM2.svg?-tu7vpl#icon-TTSM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="iconTTSM-"], [class*=" iconTTSM2-"] {
+	font-family: 'icon-TTSM2';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 0.6;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.iconTTSM2-as:before {
+	content: "\e601";
+}
+.iconTTSM2-a:before {
+	content: "\e600";
+}
+.iconTTSM2-i:before {
+	content: "\e602";
+}
+.iconTTSM2-O:before {
+	content: "\e603";
+}
+.iconTTSM2-r:before {
+	content: "\e604";
+}
+.iconTTSM2-wd:before {
+	content: "\e605";
+}
+.iconTTSM2-wr:before {
+	content: "\e606";
+}

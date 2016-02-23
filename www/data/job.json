@@ -1,0 +1,72 @@
+﻿[
+	{
+		"ID": "JB14-000184",
+		"TITLE": "ACC_AID-AC MAIN FAILED",
+		"SERVERITY": "Critical",
+		"ASSIGN_BY": "Totsaworn Tangsuwannakit",
+		"ASSIGN_TO": "Sumet Sarikphuk",
+		"START_DATE": "10/3/2014 17:08:06",
+		"DUE_DATE": "9/4/2014 17:08:06",
+		"COUNTDOWN": "36:13",
+		"STATUS": "Assign",
+		"TEAM": "TEST_AOF_2",
+		"PERSON": "Sumet Sarikphuk",
+		"url": "content/seaweed-salad.jpg"
+	},
+	{
+		"ID": "JB14-000156",
+		"TITLE": "3BILTWA01B-BATT LOW VOLT 1 counter>=15mins.",
+		"SERVERITY": "Major",
+		"ASSIGN_BY": "Totsaworn Tangsuwannakit",
+		"ASSIGN_TO": "Arjwicha Nganpheanlert",
+		"START_DATE": "3/3/2014 08:09",
+		"DUE_DATE": "2/4/2014 08:09",
+		"COUNTDOWN": "13:50",
+		"STATUS": "Accept",
+		"TEAM": "TEST_AOF_2",
+		"PERSON": "Arjwicha Nganpheanlert",
+		"url": "content/seaweed-salad.jpg"
+	},
+	{
+		"ID": "JB14-000789",
+		"TITLE": "BSCONT1-Project Test Move Equipment",
+		"SERVERITY": "Minor",
+		"ASSIGN_BY": "Arocha Cheeranoravanich",
+		"ASSIGN_TO": "Chaleampong Tienpiboonsiri",
+		"START_DATE": "20/3/2014 11:26",
+		"DUE_DATE": "22/3/2014 11:26",
+		"COUNTDOWN": "1:00",
+		"STATUS": "Onsite",
+		"TEAM": "TEST_AOF_2",
+		"PERSON": "Chaleampong Tienpiboonsiri",
+		"url": "content/seaweed-salad.jpg"
+	},
+	{
+		"ID": "JB14-000145",
+		"TITLE": "3BILTWA01B-BATT LOW VOLT 1 counter>=15mins",
+		"SERVERITY": "Minor",
+		"ASSIGN_BY": "Totsaworn Tangsuwannakit",
+		"ASSIGN_TO": "Arnondh Chanjek",
+		"START_DATE": "28/2/2014 13:00",
+		"DUE_DATE": "30/3/2014 13:00",
+		"COUNTDOWN": "1:00",
+		"STATUS": "Assign",
+		"TEAM": "TEST_AOF_2",
+		"PERSON": "Arnondh Chanjek",
+		"url": "content/seaweed-salad.jpg"
+	},
+	{
+		"ID": "JB14-000336",
+		"TITLE": "3BILTWA01B-RECT MODULE FAIL >= 10 counters",
+		"SERVERITY": "Critical",
+		"ASSIGN_BY": "Arocha Cheeranoravanich",
+		"ASSIGN_TO": "Arjwicha Nganpheanlert",
+		"START_DATE": "10/3/2014 17:00",
+		"DUE_DATE": "13/3/2014 17:00",
+		"COUNTDOWN": "1:00",
+		"STATUS": "Onsite",
+		"TEAM": "TEST_AOF_2",
+		"PERSON": "Arjwicha Nganpheanlert",
+		"url": "content/seaweed-salad.jpg"
+	}
+]

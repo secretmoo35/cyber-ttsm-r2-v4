@@ -1,0 +1,280 @@
+.fa .km-icon:after,
+.fa .km-icon:before
+{
+    font: 1em/1em 'FontAwesome';
+}
+
+.gab .km-icon:after,
+.gab .km-icon:before
+{
+    font: 1em/1em 'icon-TTSM';
+}
+
+.mo .km-icon:after,
+.mo .km-icon:before
+{
+    font: 1em/1em 'icomoon';
+}
+
+.ion .km-icon:after,
+.ion .km-icon:before
+{
+    font: 1em/1em 'Ionicons';
+}
+
+
+.km-ion-home:after,
+.km-ion-home:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f447";
+    /*color:#33cd5f;*/
+}
+
+.km-ion-multi-change:after,
+.km-ion-multi-change:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f3fe";
+    /*color:#33cd5f;*/
+}
+/*content: "\f4a5"; */
+.km-ion-power-search:after,
+.km-ion-power-search:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f4a5";
+    /*color:#33cd5f;*/
+}
+
+.km-ion-setting:after,
+.km-ion-setting:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f43c";
+    /*color:#33cd5f;*/
+}
+
+.km-ion-help:after,
+.km-ion-help:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f445";
+    /*color:#33cd5f;*/
+}
+
+.km-ion-logout:after,
+.km-ion-logout:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f4c8";
+    /*color:#33cd5f;*/
+}
+.km-flat .km-tabstrip .km-button .km-ion-my
+{
+    color:#33cd5f;
+}
+.km-ion-my:after,
+.km-ion-my:before
+{
+    /*content: url("../images/My.png");*/
+    content: "\f419";
+    /*color:#33cd5f;*/
+}
+
+.km-flat .km-tabstrip .km-button .km-ion-team
+{
+    color:#33cd5f;
+}
+
+.km-ion-team:after,
+.km-ion-team:before
+{
+    /*content: url("../images/iconMyTeam.png");*/
+    content: "\f47b";
+    /*color:#33cd5f;*/
+}
+
+.km-flat .km-tabstrip .km-button .km-gab-assign
+{
+    color:#11c1f3;
+}
+.km-gab-assign:after,
+.km-gab-assign:before
+{
+    /*content: url("../images/iconAssign.png");*/
+    content:"\e605";
+    /*color:#11c1f3;*/
+}
+
+.km-icon-save2:after,
+.km-icon-save2:before
+{
+    /*content: url("../images/iconMyTeam.png");*/
+    content: "\e905";
+    /*color:#33cd5f;*/
+}
+.km-icon-save:after,
+.km-icon-save:before
+{
+    /*content: url("../images/iconMyTeam.png");*/
+    content: "\e904";
+    /*color:#33cd5f;*/
+}
+
+.km-flat .km-tabstrip .km-button .km-gab-iconActiveBox
+{
+    color:#e42012;
+}
+.km-gab-iconActiveBox:after,
+.km-gab-iconActiveBox:before
+{
+    /*content: url("../images/iconActiveBox.png");*/
+    content: "\e602";
+    /*color:#e42012;*/
+}
+
+.km-flat .km-tabstrip .km-button .km-ion-iconMap
+{
+    color:#6b46e5;
+}
+.km-ion-iconMap:after,
+.km-ion-iconMap:before
+{
+    /*content: url("../images/iconMap.png");*/
+    content: "\f4d2";
+    /*color: #6b46e5;*/
+}
+
+.km-flat .km-tabstrip .km-button .km-ion-iconMore
+{
+    color:#387ef5;
+}
+.km-ion-iconMore:after,
+.km-ion-iconMore:before
+{
+    /*content: url("../images/iconMore.png");*/
+    content: "\f483"; 
+    /*color:#387ef5;*/
+}
+
+.km-menu:after,
+.km-menu:before
+{
+    content: "\f394";
+}
+.km-inbox:after,
+.km-inbox:before
+{
+    content: "\f0e0";
+}
+
+.km-initial-e:after,
+.km-initial-e:before
+{
+    content: "\e0a6";
+}
+
+.km-onsite:after,
+.km-onsite:before
+{
+    content: "\f0d1";
+}
+
+.km-report:after,
+.km-report:before
+{
+    content: "\f0a1";
+}
+
+.km-waitreport:after,
+.km-waitreport:before
+{
+    content: "\f017";
+}
+
+.km-waitdetail:after,
+.km-waitdetail:before
+{
+    content: "\f05a";
+}
+
+.km-fa-back:after,
+.km-fa-back:before
+{
+    content: "\f177";
+}
+
+.km-fa-undo:after,
+.km-fa-undo:before
+{
+    content: "\f0e2";
+}
+
+.km-fa-save:after,
+.km-fa-save:before
+{
+    content: "\f0c7";
+}
+
+.km-fa-del:after,
+.km-fn-del:before
+{
+    content: "\f014";
+}
+
+.km-fa-action:after,
+.km-fa-action:before
+{
+    content: "\f0d7";
+}
+
+.km-check:after,
+.km-check:before
+{
+    content: "\e037";
+}
+
+.km-typing:after,
+.km-typing:before
+{
+    content: "\e061";
+}
+
+.km-fa-filter:after,
+.km-fa-filter:before
+{
+    content: "\f0b0";
+}
+
+.km-fa-display:after,
+.km-fa-display:before
+{
+    content: "\f108";
+}
+
+.km-fa-direction:after,
+.km-fa-direction:before
+{
+    content: "\f074";
+}
+
+.km-fa-multi:after,
+.km-fa-multi:before
+{
+    content: "\f00a";
+}
+
+.km-fa-gallery:after,
+.km-fa-gallery:before
+{
+    content: "\e07c";
+}
+
+
+.km-fa-pin:after,
+.km-fa-pin:before
+{
+    content: "\e0b4";
+}
+
