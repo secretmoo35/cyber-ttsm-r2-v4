@@ -82,7 +82,6 @@
                         </div>
                         <div>
                             <p>
-
                                 <b style="color: white;font-size: 0.5em">Android Version 4.3 to 5.0.1&nbsp;</b>
                             </p>
                             <p>
@@ -115,8 +114,10 @@
         <div class="km-listview-wrapper">
             <form class="km-filter-form">
                 <div class="km-filter-wrap"><input type="search" placeholder="Search..." data-bind="value:allocateFilter, events: { keyup: filterAllocateEvent }" data-value-update="keyup"><a data-bind="click: openActSheetReAllocate" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
-                <div class="hiddentext" style="visibility:hidden">
-                <input></div></div>
+                    <div class="hiddentext" style="visibility:hidden">
+                        <input>
+                    </div>
+                </div>
             </form>
         </div>
         <span>Last Updated :
@@ -176,8 +177,10 @@
         <div class="km-listview-wrapper">
             <form class="km-filter-form">
                 <div class="km-filter-wrap"><input type="search" placeholder="Search..." data-bind="value:allocateFilter, events: { keyup: filterAllocateWithEvent }" data-value-update="keyup"><a data-bind="click: sortActionSheetReAllocateWith" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
-                <div class="hiddentext" style="visibility:hidden">
-                <input></div></div>
+                    <div class="hiddentext" style="visibility:hidden">
+                        <input>
+                    </div>
+                </div>
             </form>
         </div>
         <div style="height:10px">&nbsp;</div>
@@ -411,28 +414,28 @@
         <div class="position-right">
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="01" data-statusname="Assign">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-as" data-userid="${userId}" data-username="${fullName}" data-statusid="01" data-statusname="Assign"/>&nbsp;&nbsp;${sumAssing}
+                    <i class="fa-2x balance iconTTSM2-as" data-userid="${userId}" data-username="${fullName}" data-statusid="01" data-statusname="Assign" />&nbsp;&nbsp;${sumAssing}
                 </a>
             </div>
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="02" data-statusname="Accept">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-a" data-userid="${userId}" data-username="${fullName}" data-statusid="02" data-statusname="Accept"/>&nbsp;&nbsp;${sumAccept}</a>
+                    <i class="fa-2x balance iconTTSM2-a" data-userid="${userId}" data-username="${fullName}" data-statusid="02" data-statusname="Accept" />&nbsp;&nbsp;${sumAccept}</a>
             </div>
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="03" data-statusname="Initiate">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-i" data-userid="${userId}" data-username="${fullName}" data-statusid="03" data-statusname="Initiate"/>&nbsp;&nbsp;${sumInit}</a>
+                    <i class="fa-2x balance iconTTSM2-i" data-userid="${userId}" data-username="${fullName}" data-statusid="03" data-statusname="Initiate" />&nbsp;&nbsp;${sumInit}</a>
             </div>
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="04" data-statusname="Onsite">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-O" data-userid="${userId}" data-username="${fullName}" data-statusid="04" data-statusname="Onsite"/>&nbsp;&nbsp;${sumOnsite}</a>
+                    <i class="fa-2x balance iconTTSM2-O" data-userid="${userId}" data-username="${fullName}" data-statusid="04" data-statusname="Onsite" />&nbsp;&nbsp;${sumOnsite}</a>
             </div>
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="05" data-statusname="Wait for Report">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-wr" data-userid="${userId}" data-username="${fullName}" data-statusid="05" data-statusname="Wait for Report"/>&nbsp;&nbsp;${sumWaitReport}</a>
+                    <i class="fa-2x balance iconTTSM2-wr" data-userid="${userId}" data-username="${fullName}" data-statusid="05" data-statusname="Wait for Report" />&nbsp;&nbsp;${sumWaitReport}</a>
             </div>
             <div style="width:50px;display:inline-block" data-userid="${userId}" data-username="${fullName}" data-statusid="06" data-statusname="Wait for Detail">
                 <a>
-                    <i class="fa-2x balance iconTTSM2-wd" data-userid="${userId}" data-username="${fullName}" data-statusid="06" data-statusname="Wait for Detail"/>&nbsp;&nbsp;${sumWaitDetail}</a>
+                    <i class="fa-2x balance iconTTSM2-wd" data-userid="${userId}" data-username="${fullName}" data-statusid="06" data-statusname="Wait for Detail" />&nbsp;&nbsp;${sumWaitDetail}</a>
             </div>
         </div>
     </script>
@@ -697,9 +700,8 @@
     <div data-role="view" id="tabstrip-display" data-layout="tabstrip-layout" data-model="app.jobService.viewModel" data-show="app.jobService.showbyid" data-init="app.jobService.viewInit">
         <header data-role="header">
             <div data-role="navbar">
-                
                 <!-- <a data-role="button" class="fa" data-icon="fa-back" data-align="left" data-bind="click: onBack"></a> -->
-                <a data-role="backbutton" data-align="left" class="fa" data-icon="fa-back" ></a>
+                <a data-role="backbutton" data-align="left" class="fa" data-icon="fa-back"></a>
                 <span data-role="view-title" data-bind="text: selectItem.jobId"></span>
                 <!--a data-role="button" class="fa" data-icon="fa-save" data-align="right" data-bind="click: onCickAcceptReject"></a-->
             </div>
@@ -1074,13 +1076,17 @@
                 <a data-icon="search" data-role="button" data-align="right" data-bind="click: onSearch"></a>
             </div>
         </div>
+        <div style="background-color: #F4F4F4">
         <div class="km-listview-wrapper" data-bind="visible: isSearch">
             <form class="km-filter-form">
                 <div class="km-filter-wrap"><input type="search" placeholder="Search..." data-bind="value:assignFilter, events: { keyup: filterAssignEvent }" data-value-update="keyup"><a data-bind="click: openActSheetAssign" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
-                <div class="hiddentext" style="visibility:hidden">
-                <input></div></div>
+                    <div class="hiddentext" style="visibility:hidden">
+                        <input>
+                    </div>
+                </div>
             </form>
         </div>
+        <br>
         <span>Last Updated :
                 <span data-bind="text: lastupdateassign"></span>
         </span>
@@ -1103,6 +1109,7 @@
                 <!--<br />None-->
             </li>
         </ul>
+    </div>
         <div data-role="content">
             <ul id="lvAssignList" class="inboxList"></ul>
         </div>
@@ -1241,35 +1248,39 @@
                 <span>Active Box</span>
             </div>
         </div>
+        <div style="background-color: #F4F4F4">
         <div class="km-listview-wrapper" data-bind="visible: isSearch">
-            <form class="km-filter-form"
-            ><div class="km-filter-wrap"><input type="search"  placeholder="Search..." data-bind="value:acceptFilter, events: { keyup: filterAcceptEvent , keydown: filterAcceptEvent }" data-value-update="keyup keydown" ><a data-bind="click: openActSheetAccept" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
-                <div class="hiddentext" style="visibility:hidden">
-                <input></div></div>
+            <form class="km-filter-form">
+                <div class="km-filter-wrap"><input type="search" placeholder="Search..." data-bind="value:acceptFilter, events: { keyup: filterAcceptEvent , keydown: filterAcceptEvent }" data-value-update="keyup keydown"><a data-bind="click: openActSheetAccept" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
+                    <div class="hiddentext" style="visibility:hidden">
+                        <input>
+                    </div>
+                </div>
             </form>
         </div>
-        
-        <span>Last Updated :
+        <br>
+            <span>Last Updated :
                 <span data-bind="text: lastupdateaccept"></span>
-        </span>
-        <div style="height: 10px">&nbsp;</div>
-        <ul id="acceptgroup" data-role="buttongroup" data-index="0" style="color: #74A333">
-            <li>
-                <img src="images/iconStatus_accept.png" class="iconStatus" />
-            </li>
-            <li>
-                <img src="images/iconStatus_initial.png" class="iconStatus" />
-            </li>
-            <li class="fa">
-                <img src="images/iconStatus_onSite.png" class="iconStatus" />
-            </li>
-            <li class="fa">
-                <img src="images/iconStatus_wReport.png" class="iconStatus" />
-            </li>
-            <li class="fa">
-                <img src="images/iconStatus_wDetail.png" class="iconStatus" />
-            </li>
-        </ul>
+            </span>
+            <div style="height: 10px">&nbsp;</div>
+            <ul id="acceptgroup" data-role="buttongroup" data-index="0" style="color: #74A333">
+                <li class="fa">
+                    <img src="images/iconStatus_accept.png" class="iconStatus" />
+                </li>
+                <li class="fa">
+                    <img src="images/iconStatus_initial.png" class="iconStatus" />
+                </li>
+                <li class="fa">
+                    <img src="images/iconStatus_onSite.png" class="iconStatus" />
+                </li>
+                <li class="fa">
+                    <img src="images/iconStatus_wReport.png" class="iconStatus" />
+                </li>
+                <li class="fa">
+                    <img src="images/iconStatus_wDetail.png" class="iconStatus" />
+                </li>
+            </ul>
+        </div>
         <!--<ul id="fixed-listview" data-bind="source: job_dtls, click: editJob" class="inboxList"></ul>-->
         <div data-role="content">
             <ul id="lvAcceptList"></ul>
@@ -1351,7 +1362,6 @@
                 <a data-action="app.jobService.viewModel.gotoDirection">Direction</a>
             </li>
         </ul>
-        
         <ul data-role="actionsheet" id="sortActionSheetAccept">
             <div class="position-right">
                 <input id="switchAccept" data-role="switch" data-on-label="A-Z" data-off-label="Z-A" />
@@ -1367,7 +1377,7 @@
             <li> <a data-action="app.jobService.viewModel.onAcceptSortby('initiateDate')"><i data-bind="visible: isVisible('initiateDate')" class="fa icon-tick position-left"></i>Assign Date</a></li>
             <li> <a data-action="app.jobService.viewModel.onAcceptSortby('finishDate')"><i data-bind="visible: isVisible('finishDate')" class="fa icon-tick position-left"></i>Finish Date</a></li>
             <li> <a data-action="app.jobService.viewModel.onAcceptSortby('priorityId')"><i data-bind="visible: isVisible('priorityId')" class="fa icon-tick position-left"></i>Priority</a></li>
-         </ul>
+        </ul>
     </div>
     <!--Accept template-->
     <script type="text/x-kendo-tmpl" id="accept-template">
@@ -1650,7 +1660,7 @@
             </div>
             <div>
             <span class="info_view">Site Access : <b style="color:black">${siteAccessDesc}</b></span> </a>
-            </div>           
+        </div>
     </script>
     <!--multi template-->
     <script type="text/x-kendo-tmpl" id="multi-template">
@@ -1746,11 +1756,11 @@
     </div>
     <!--End Report multi-->
     <!--Edit View-->
-    <div data-role="view" id="tabstrip-edit"  data-model="app.jobService.viewModel" data-init="app.jobService.editInit" data-show="app.jobService.showbyid" data-layout="tabstrip-layout">
+    <div data-role="view" id="tabstrip-edit" data-model="app.jobService.viewModel" data-init="app.jobService.editInit" data-show="app.jobService.showbyid" data-layout="tabstrip-layout">
         <header data-role="header">
             <div data-role="navbar">
                 <!-- <a data-role="button" class="fa" data-icon="fa-back" data-align="left" data-bind="click: onBack"></a> -->
-                <a data-role="backbutton" data-align="left" class="fa" data-icon="fa-back" ></a>
+                <a data-role="backbutton" data-align="left" class="fa" data-icon="fa-back"></a>
                 <span data-role="view-title" data-bind="text: selectItem.jobId"></span>
                 <a data-role="button" class="mo" data-icon="icon-save2" data-align="right" data-bind="click: changeStatusMore, visible: isSave"></a>
                 <a data-role="button" class="mo" data-icon="icon-save" data-align="right" data-bind="click: changeStatus, visible: isSave"></a>
@@ -3512,7 +3522,6 @@
             </div>
             <span class="info_view">Site Access : <b style="color:black">${siteAccessDesc}</b></span>
             <span class="info_view">Job Status : <b style="color:black">${statusName}</b></span>
-            
         </li>
     </script>
     <!--Dashboard Filter-->
@@ -3656,7 +3665,8 @@
                     </li>
                     <li data-icon="contact">
                         <div class="position-left">
-                            <b>Region</b><font style="color: red">*</font>
+                            <b>Region</b>
+                            <font style="color: red">*</font>
                         </div>
                         <div class="position-right">
                             <select id="ddlregion" style="width: 220px;">
@@ -3665,7 +3675,8 @@
                     </li>
                     <li data-icon="contact">
                         <div class="position-left">
-                            <b>Zone</b><font style="color: red">*</font>
+                            <b>Zone</b>
+                            <font style="color: red">*</font>
                         </div>
                         <div class="position-right">
                             <select id="ddlzone" style="width: 220px;">
@@ -3771,7 +3782,7 @@
         </ul>
     </div>
     <!--powerService-->
-    <div data-role="view" id="powerService" data-model="app.powerSearchService.viewModel" data-show="app.powerSearchService.showResult"  data-layout="tabstrip-layout">
+    <div data-role="view" id="powerService" data-model="app.powerSearchService.viewModel" data-show="app.powerSearchService.showResult" data-layout="tabstrip-layout">
         <div data-role="header">
             <div data-role="navbar">
                 <span><label data-bind="text: titletxtJobListMap"></label></span>
@@ -3784,26 +3795,26 @@
         <div class="km-listview-wrapper" data-bind="visible: isSearch">
             <form class="km-filter-form">
                 <div class="km-filter-wrap"><input type="search" placeholder="Search..." data-bind="value:allocateFilter, events: { keyup: filterAllocateEvent }" data-value-update="keyup"><a data-bind="click: openActSheetPowerService" class="km-filter-reset" title="Sort"><span class="fa icon-AZ3 sort-icon"></span></a>
-                <div class="hiddentext" style="visibility:hidden">
-                <input></div></div>
+                    <div class="hiddentext" style="visibility:hidden">
+                        <input>
+                    </div>
+                </div>
             </form>
-
             <ul data-role="actionsheet" id="sortActionSheetPowerService">
                 <div class="position-right">
                     <input id="switchPowerService" data-role="switch" data-on-label="A-Z" data-off-label="Z-A" />
                 </div>
                 <li>
                     <font color="White">Sort By</font>
-
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('finishDates')"><i data-bind="visible: isVisible('finishDates')" class="fa icon-tick position-left"></i>Count Down</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('jobId')"><i data-bind="visible: isVisible('jobId')" class="fa icon-tick position-left"></i>Job ID</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('title')"><i data-bind="visible: isVisible('title')" class="fa icon-tick position-left"></i>Title</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('siteAccessDesc')"><i data-bind="visible: isVisible('siteAccessDesc')" class="fa icon-tick position-left"></i>Site Access(Code)</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('siteNameTh')"><i data-bind="visible: isVisible('siteNameTh')" class="fa icon-tick position-left"></i>Site Access(Name Thai)</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('initiateDate')"><i data-bind="visible: isVisible('initiateDate')" class="fa icon-tick position-left"></i>Assign Date</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('finishDate')"><i data-bind="visible: isVisible('finishDate')" class="fa icon-tick position-left"></i>Finish Date</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('priorityId')"><i data-bind="visible: isVisible('priorityId')" class="fa icon-tick position-left"></i>Priority</a></li>
-            <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('status')"><i data-bind="visible: isVisible('status')" class="fa icon-tick position-left"></i>Status</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('finishDates')"><i data-bind="visible: isVisible('finishDates')" class="fa icon-tick position-left"></i>Count Down</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('jobId')"><i data-bind="visible: isVisible('jobId')" class="fa icon-tick position-left"></i>Job ID</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('title')"><i data-bind="visible: isVisible('title')" class="fa icon-tick position-left"></i>Title</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('siteAccessDesc')"><i data-bind="visible: isVisible('siteAccessDesc')" class="fa icon-tick position-left"></i>Site Access(Code)</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('siteNameTh')"><i data-bind="visible: isVisible('siteNameTh')" class="fa icon-tick position-left"></i>Site Access(Name Thai)</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('initiateDate')"><i data-bind="visible: isVisible('initiateDate')" class="fa icon-tick position-left"></i>Assign Date</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('finishDate')"><i data-bind="visible: isVisible('finishDate')" class="fa icon-tick position-left"></i>Finish Date</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('priorityId')"><i data-bind="visible: isVisible('priorityId')" class="fa icon-tick position-left"></i>Priority</a></li>
+                    <li> <a data-action="app.powerSearchService.viewModel.onPowerServiceSortby('status')"><i data-bind="visible: isVisible('status')" class="fa icon-tick position-left"></i>Status</a></li>
             </ul>
         </div>
         <span>Last Updated :
@@ -3811,9 +3822,9 @@
         </span>
         <div style="height: 10px">&nbsp;</div>
         <div data-role="content">
-        <div style="color:red; text-align:center;">
-            <span  data-bind="visible: isNotfound">Data Not Found.</span>
-        </div>
+            <div style="color:red; text-align:center;">
+                <span data-bind="visible: isNotfound">Data Not Found.</span>
+            </div>
             <ul id="lvPowerSearchList"></ul>
             <ul data-role="actionsheet" id="pAssignActions">
                 <li>
@@ -3879,9 +3890,9 @@
             </ul>
             <ul data-role="actionsheet" id="pReportActions">
                 <li class="km-actionsheet-title">Change Status to:</li>
-                <li>
+                <!--                 <li>
                     <a data-action="app.jobService.viewModel.gotoReportDetail">Report</a>
-                </li>
+                </li> -->
                 <!--<li><a href="#" data-action="waitreport">Waite for Report</a></li>
              <li><a href="#" data-action="waitmore">Waite for More Detail</a></li>-->
                 <li>
@@ -3891,15 +3902,12 @@
                     <a data-action="app.jobService.viewModel.gotoAlarm">Check Alarm</a>
                 </li>
             </ul>
-            
             <ul data-role="actionsheet" id="pAssignActionsV">
-                
                 <li>
                     <a href="#tabstrip-assign" data-action="app.jobService.viewModel.gotoAssignDetail">Go to detail</a>
                 </li>
             </ul>
             <ul data-role="actionsheet" id="pAcceptActionsV">
-                
                 <li>
                     <a data-action="app.jobService.viewModel.gotoDetail">Go to Detail</a>
                 </li>
@@ -3909,7 +3917,6 @@
             </ul>
             <ul data-role="actionsheet" id="pInitialActionsV">
                 <li class="km-actionsheet-title">Change Status to:</li>
-                
                 <li>
                     <a data-action="app.jobService.viewModel.gotoDetail">Go to Detail</a>
                 </li>
@@ -3919,7 +3926,6 @@
             </ul>
             <ul data-role="actionsheet" id="pOnsiteActionsV">
                 <li class="km-actionsheet-title">Change Status to:</li>
-                
                 <li>
                     <a data-action="app.jobService.viewModel.gotoDetail">Go to Detail</a>
                 </li>
@@ -3929,7 +3935,6 @@
             </ul>
             <ul data-role="actionsheet" id="pReportActionsV">
                 <li class="km-actionsheet-title">Change Status to:</li>
-                
                 <li>
                     <a data-action="app.jobService.viewModel.gotoDetail">Go to Detail</a>
                 </li>
@@ -3941,9 +3946,8 @@
     </div>
     <!--Power Search template-->
     <script type="text/x-kendo-tmpl" id="psearch-template">
-        #if(assignTo == JSON.parse(localStorage.getItem("profileData")).userId){
-            if(status=="Assign"){#
-            <a data-rel="actionsheet" href="\\#pAssignActions" data-actionsheet-context="${jobId}">
+        #if(assignTo == JSON.parse(localStorage.getItem("profileData")).userId){ if(status=="Assign"){#
+        <a data-rel="actionsheet" href="\\#pAssignActions" data-actionsheet-context="${jobId}">
             #}else if (status=="Accept"){#
             <a data-rel="actionsheet" href="\\#pAcceptActions" data-actionsheet-context="${jobId}">
             #}else if (status=="Initiate"){#
@@ -4032,6 +4036,9 @@
             <li>Site Access</li>
             <li>Site Affect</li>
         </ul>
+<!--             <div style="color:red; text-align:center;">
+                <span data-bind="visible: isNotfound">Data Not Found.</span>
+            </div> -->
         <ul data-role="listview" id="lvSiteAlarm" data-style="inset">
         </ul>
     </div>
@@ -4041,14 +4048,15 @@
             <div data-role="navbar">
                 <span data-bind="text: siteAlarmType"></span>
                 <!-- jigkoh3 fix issue back to map -->
-                
                 <a data-role="backbutton" data-align="left" class="fa" data-icon="fa-back" data-bind="invisible: isDirectFromMap"></a>
                 <a data-icon="fa-back" class="fa" data-role="button" data-align="left" data-bind="click: backToMap, visible: isDirectFromMap"></a>
-                
             </div>
         </div>
         <ul data-role="listview" id="lvAlarm" data-style="inset">
         </ul>
+                    <div style="color:red; text-align:center;">
+                <span data-bind="visible: isNotfound">Data Not Found.</span>
+            </div>
     </div>
     <!--End-->
     <div data-role="view" id="SiteAlarmMob" data-layout="tabstrip-layout" data-model="app.jobService.viewModel">
@@ -4540,7 +4548,7 @@
     <div id="LoadMaster" data-role="view" data-layout="tabstrip-layout" data-init="app.masterService.init" data-show="app.masterService.show" data-after-show="app.masterService.afterShow" data-hide="app.masterService.hide">
         <div></div>
     </div>
-    <div id="MockUp" data-role="view" data-layout="tabstrip-layout"  data-show="app.jobService.reloadStatus" >
+    <div id="MockUp" data-role="view" data-layout="tabstrip-layout" data-show="app.jobService.reloadStatus">
         <div></div>
     </div>
     <div data-role="drawer" id="my-drawer" class="left-panel" data-swipe-to-open="false" data-model="app.moreService.viewModel">

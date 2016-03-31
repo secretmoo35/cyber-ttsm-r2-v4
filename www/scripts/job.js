@@ -72,9 +72,11 @@
 
             if (selectItem.statusId < "05" && selectedStatus == "05") {
                 if ((selectItem.finishDate / 1000) < moment().unix()) {
-                    return true;
+                    if (selectItem.flagOverDue != "Y") {
+                        return true;
+                    }
                 }
-            } else if (selectItem.statusId == "05") {
+            } else if (selectItem.statusId == "05" && selectItem.flagOverDue != "Y") {
                 return true;
             } else {
                 return false;
@@ -3447,6 +3449,11 @@
                             dataType: "json",
                             contentType: 'application/json',
                             success: function(response) {
+                                // if (response && response.jobCheckAlarms && response.jobCheckAlarms.length >= 1) {
+                                //     that.set("isNotfound", false);
+                                // } else {
+                                //     that.set("isNotfound", true);
+                                // }
                                 operation.success(response);
                             },
                             error: function(xhr, error) {
@@ -3713,13 +3720,16 @@
 
             var alarmDataSource = new kendo.data.DataSource({
                 transport: {
+
                     read: function(operation) {
+                        var that = app.jobService.viewModel;
                         $.ajax({ //using jsfiddle's echo service to simulate remote data loading
                             beforeSend: app.loginService.viewModel.checkOnline,
                             type: "POST",
                             timeout: 180000,
                             url: app.configService.serviceUrl + 'post-json.service?s=transaction-service&o=getActiveAlarm.json',
                             data: JSON.stringify({
+                                "jobId": that.alarmJobId,
                                 "siteCode": _siteAlarm,
                                 "token": localStorage.getItem("token"),
                                 "user": JSON.parse(localStorage.getItem("profileData")).userId,
@@ -3729,10 +3739,15 @@
                             contentType: 'application/json',
                             success: function(response) {
                                 console.log(response);
+                                // if (response.activeAlarms.length == 0) {
+                                //     // alert("Alarm Active not found.");
+                                //     navigator.notification.alert("Alarm Active not found.",
+                                //         function() {}, "Alarm Active ", 'OK');
+                                // }
                                 if (response.activeAlarms.length == 0) {
-                                    // alert("Alarm Active not found.");
-                                    navigator.notification.alert("Alarm Active not found.",
-                                        function() {}, "Alarm Active ", 'OK');
+                                    that.set("isNotfound", true);
+                                } else {
+                                    that.set("isNotfound", false);
                                 }
                                 //console.log(response.alarmDataSource);
                                 operation.success(response);

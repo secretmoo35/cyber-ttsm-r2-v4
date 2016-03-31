@@ -457,11 +457,14 @@
                 //var selectItem = that.get("selectItem");
                 var selectedStatus = that.get("selectedStatus");
 
+
+                //24/02/2016 change biz logic --> original --> selectItem.statusId < "05" && selectedStatus == "05"
                 if (selectItem.statusId < "05" && selectedStatus == "05") {
                     if ((selectItem.finishDate / 1000) < moment().unix()) {
                         isReason = true;
                     }
                 } else if (selectItem.statusId == "05") {
+                    //24/02/2016  comment line  --> isReason = true;
                     isReason = true;
                 } else {
                     isReason = false;
