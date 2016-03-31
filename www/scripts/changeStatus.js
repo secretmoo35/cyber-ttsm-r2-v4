@@ -414,7 +414,7 @@
                         var view = selectProblemC.view();
                         if (view.length == 0) {
                             navigator.notification.alert("Please select Problem Cause.",
-                            function() {}, "Change Status Job : Save incomplete!", 'OK');
+                                function() {}, "Change Status Job : Save incomplete!", 'OK');
                             flag = false;
                         }
                     });
@@ -422,30 +422,30 @@
                     if (!flag) {
                         return false;
                     }
-                    console.log("###### checkReq selectProblem Solve#########");
-                    if (!app.changeStatusService.checkProblemSolve()) {
-                        navigator.notification.alert("Please select problem solve.",
-                            function() {
-                                return false;
-                            }, "Change Status Job : Save incomplete!", 'OK');
-                        return false;
-                    }
+                    // console.log("###### checkReq selectProblem Solve#########");
+                    // if (!app.changeStatusService.checkProblemSolve()) {
+                    //     navigator.notification.alert("Please select problem solve.",
+                    //         function() {
+                    //             return false;
+                    //         }, "Change Status Job : Save incomplete!", 'OK');
+                    //     return false;
+                    // }
                 } else {
                     //                  console.log("###### check problemCm #########");
-                    //					var selectProblemCM = that.get("selectProblemCM");
+                    //                  var selectProblemCM = that.get("selectProblemCM");
                     //
-                    //					selectProblemCM.fetch(function() {
-                    //						var view = selectProblemCM.view();
-                    //						if (view.length == 0) {
-                    //							navigator.notification.alert("Please select Problem Cause.",
-                    //								function() {}, "Change Status Job : Save incomplete!", 'OK');
-                    //							console.log("#### Problem Cause Multi Require! 4");
-                    //							return false;
-                    //						}
-                    //					});
+                    //                  selectProblemCM.fetch(function() {
+                    //                      var view = selectProblemCM.view();
+                    //                      if (view.length == 0) {
+                    //                          navigator.notification.alert("Please select Problem Cause.",
+                    //                              function() {}, "Change Status Job : Save incomplete!", 'OK');
+                    //                          console.log("#### Problem Cause Multi Require! 4");
+                    //                          return false;
+                    //                      }
+                    //                  });
 
                     //if (!app.changeStatusService.checkProblemSolve()) {
-                    //	return false;
+                    //  return false;
                     //}
                 }
 
@@ -472,11 +472,13 @@
 
                 console.log("###### checkReq Reason#########");
                 if (isReason) {
-                    if (selectItem.reasonOverdueDesc == undefined || selectItem.reasonOverdueDesc == null || selectItem.reasonOverdueDesc == "") {
-                        navigator.notification.alert("Please select Reason over Due",
-                            function() {}, "Change Status Job : Save incomplete!", 'OK');
-                        ////console.log("Reason over Due Require!");
-                        return false;
+                    if (selectItem.flagOverDue != "Y") {
+                        if (selectItem.reasonOverdueDesc == undefined || selectItem.reasonOverdueDesc == null || selectItem.reasonOverdueDesc == "") {
+                            navigator.notification.alert("Please select Reason over Due",
+                                function() {}, "Change Status Job : Save incomplete!", 'OK');
+                            ////console.log("Reason over Due Require!");
+                            return false;
+                        }
                     }
                 }
 
