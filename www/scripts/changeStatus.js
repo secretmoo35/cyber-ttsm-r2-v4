@@ -472,7 +472,7 @@
 
                 console.log("###### checkReq Reason#########");
                 if (isReason) {
-                    if (selectItem.flagOverDue != "Y") {
+                    if (selectItem.flagOverDue == "Y") {
                         if (selectItem.reasonOverdueDesc == undefined || selectItem.reasonOverdueDesc == null || selectItem.reasonOverdueDesc == "") {
                             navigator.notification.alert("Please select Reason over Due",
                                 function() {}, "Change Status Job : Save incomplete!", 'OK');

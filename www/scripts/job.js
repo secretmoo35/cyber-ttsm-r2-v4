@@ -70,13 +70,9 @@
             var selectItem = that.get("selectItem");
             var selectedStatus = that.get("selectedStatus");
 
-            if (selectItem.statusId < "05" && selectedStatus == "05") {
-                if ((selectItem.finishDate / 1000) < moment().unix()) {
-                    if (selectItem.flagOverDue != "Y") {
-                        return true;
-                    }
-                }
-            } else if (selectItem.statusId == "05" && selectItem.flagOverDue != "Y") {
+            if (selectItem.statusId < "05" && selectedStatus == "05" && selectItem.flagOverDue == "Y") {
+                return true;
+            } else if (selectItem.statusId == "05" && selectItem.flagOverDue == "Y") {
                 return true;
             } else {
                 return false;
@@ -235,7 +231,7 @@
             var that = app.jobService.viewModel;
             var selectItem = that.get("selectItem");
 
-            if (selectItem.status == "Accept") {
+            if (selectItem.statusId == "02") {
                 return true;
             } else {
                 return false;
@@ -245,7 +241,7 @@
             var that = app.jobService.viewModel;
             var selectItem = that.get("selectItem");
 
-            if (selectItem.status == "Initiate") {
+            if (selectItem.statusId == "03") {
                 return true;
             } else {
                 return false;
@@ -255,7 +251,7 @@
             var that = app.jobService.viewModel;
             var selectItem = that.get("selectItem");
 
-            if (selectItem.status == "On-Site") {
+            if (selectItem.statusId == "04") {
                 return true;
             } else {
                 return false;
@@ -2674,6 +2670,13 @@
 
                                         var btnGroup = $("#acceptgroup").data("kendoMobileButtonGroup");
                                         app.jobService.viewModel.filteraccept(btnGroup.current().index());
+                                        //tabstrip-edit
+                                        // app.application.navigate('#tabstrip-edit');
+                                        //jigkoh3 
+                                        //selectItem.status = "On-Site";
+                                        selectItem.statusId = dataValue.allItemList[0].jbList[0].newStatus;
+                                        that.set("selectItem", selectItem);
+                                        kendo.bind($(".act-bind"), app.jobService.viewModel);
                                     }, "Change Status Job : Save complete!", 'OK');
                             } else if (returnUrl == "#Multi") {
                                 navigator.notification.alert(dataValue.allItemList[0].jbList[0].jobId,
@@ -3703,7 +3706,7 @@
                 JBs,
                 Photo;
 
-            that.showLoading();
+
 
             _siteAlarm = "";
 
@@ -3712,80 +3715,86 @@
                     var id = val.className.replace(/chkSiteAlarm-/g, '').split(' ')[0];
                     _siteAlarm = _siteAlarm + id + ","
 
-                }
+                    that.showLoading();
 
+                    var alarmDataSource = new kendo.data.DataSource({
+                        transport: {
 
-            });
-
-
-            var alarmDataSource = new kendo.data.DataSource({
-                transport: {
-
-                    read: function(operation) {
-                        var that = app.jobService.viewModel;
-                        $.ajax({ //using jsfiddle's echo service to simulate remote data loading
-                            beforeSend: app.loginService.viewModel.checkOnline,
-                            type: "POST",
-                            timeout: 180000,
-                            url: app.configService.serviceUrl + 'post-json.service?s=transaction-service&o=getActiveAlarm.json',
-                            data: JSON.stringify({
-                                "jobId": that.alarmJobId,
-                                "siteCode": _siteAlarm,
-                                "token": localStorage.getItem("token"),
-                                "user": JSON.parse(localStorage.getItem("profileData")).userId,
-                                "version": "2"
-                            }),
-                            dataType: "json",
-                            contentType: 'application/json',
-                            success: function(response) {
-                                console.log(response);
-                                // if (response.activeAlarms.length == 0) {
-                                //     // alert("Alarm Active not found.");
-                                //     navigator.notification.alert("Alarm Active not found.",
-                                //         function() {}, "Alarm Active ", 'OK');
-                                // }
-                                if (response.activeAlarms.length == 0) {
-                                    that.set("isNotfound", true);
-                                } else {
-                                    that.set("isNotfound", false);
-                                }
-                                //console.log(response.alarmDataSource);
-                                operation.success(response);
-                            },
-                            error: function(xhr, error) {
-                                that.hideLoading();
-                                if (!app.ajaxHandlerService.error(xhr, error)) {
-                                    ////console.log("Accept : Save incomplete! ");
-                                    ////console.log("err=>xhr : " + JSON.stringify(xhr) + ", error : " + error);
-                                    navigator.notification.alert(error,
-                                        function() {}, "Get Site Alarm incomplete! ", 'OK');
-                                }
-                                //return false;
-                            },
-                            complete: function() {
-                                that.hideLoading();
+                            read: function(operation) {
+                                var that = app.jobService.viewModel;
+                                $.ajax({ //using jsfiddle's echo service to simulate remote data loading
+                                    beforeSend: app.loginService.viewModel.checkOnline,
+                                    type: "POST",
+                                    timeout: 180000,
+                                    url: app.configService.serviceUrl + 'post-json.service?s=transaction-service&o=getActiveAlarm.json',
+                                    data: JSON.stringify({
+                                        "jobId": that.alarmJobId,
+                                        "siteCode": _siteAlarm,
+                                        "token": localStorage.getItem("token"),
+                                        "user": JSON.parse(localStorage.getItem("profileData")).userId,
+                                        "version": "2"
+                                    }),
+                                    dataType: "json",
+                                    contentType: 'application/json',
+                                    success: function(response) {
+                                        console.log(response);
+                                        // if (response.activeAlarms.length == 0) {
+                                        //     // alert("Alarm Active not found.");
+                                        //     navigator.notification.alert("Alarm Active not found.",
+                                        //         function() {}, "Alarm Active ", 'OK');
+                                        // }
+                                        if (response.activeAlarms.length == 0) {
+                                            that.set("isNotfound", true);
+                                        } else {
+                                            that.set("isNotfound", false);
+                                        }
+                                        //console.log(response.alarmDataSource);
+                                        operation.success(response);
+                                    },
+                                    error: function(xhr, error) {
+                                        that.hideLoading();
+                                        if (!app.ajaxHandlerService.error(xhr, error)) {
+                                            ////console.log("Accept : Save incomplete! ");
+                                            ////console.log("err=>xhr : " + JSON.stringify(xhr) + ", error : " + error);
+                                            navigator.notification.alert(error,
+                                                function() {}, "Get Site Alarm incomplete! ", 'OK');
+                                        }
+                                        //return false;
+                                    },
+                                    complete: function() {
+                                        that.hideLoading();
+                                    }
+                                });
                             }
-                        });
-                    }
-                },
-                schema: {
-                    data: "activeAlarms"
+                        },
+                        schema: {
+                            data: "activeAlarms"
+                        }
+                    });
+
+                    // aa.fetch(function() {
+
+                    // });
+                    $("#lvAlarm").kendoMobileListView({
+                        dataSource: alarmDataSource,
+                        style: "inset",
+                        template: $("#site-alarm-template").html()
+                    });
+
+                    app.application.navigate(
+                        '#SiteAlarmDtl'
+                    );
+
+                } else {
+                    navigator.notification.alert("โปรดเลือก Region",
+                        function() {}, "Warning", 'Please Select Site.');
                 }
-            });
 
-            // aa.fetch(function() {
 
-            // });
-            $("#lvAlarm").kendoMobileListView({
-                dataSource: alarmDataSource,
-                style: "inset",
-                template: $("#site-alarm-template").html()
             });
 
 
-            app.application.navigate(
-                '#SiteAlarmDtl'
-            );
+
 
         },
         getProblemCause: function() {
@@ -5594,6 +5603,8 @@
                         that.set("selectedStatus", djbstatusAccept.value());
                         kendo.bind($(".job-bind"), app.jobService.viewModel);
                     }
+
+
 
                     var ddReportType = $("#ddReportType").data("kendoDropDownList");
                     ddReportType.select(0);
