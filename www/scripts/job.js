@@ -3786,8 +3786,8 @@
                     );
 
                 } else {
-                    navigator.notification.alert("โปรดเลือก Region",
-                        function() {}, "Warning", 'Please Select Site.');
+                    navigator.notification.alert("Please Select Site.",
+                        function() {}, "Warning", 'OK');
                 }
 
 
