@@ -4055,7 +4055,7 @@
         <ul data-role="listview" id="lvAlarm" data-style="inset">
         </ul>
                     <div style="color:red; text-align:center;">
-                <span data-bind="visible: isNotfound">Data Not Found.</span>
+                <span data-bind="visible: isNotfound">No Alarm Active</span>
             </div>
     </div>
     <!--End-->
@@ -4448,7 +4448,7 @@
     <script id="lv-site-alarm-template" type="text/x-kendo-template">
         <label data-icon="contact">
             #if(checkFlag=="1" || checkFlag=="2"){#
-            <input type="checkbox" class="chkSiteAlarm-${siteCode}" #=checkFlag=="2" ? checked="checked" : "" # /> #}# ${siteCode}
+            <input type="checkbox" name="alarmcheck" class="chkSiteAlarm-${siteCode}" #=checkFlag=="2" ? checked="checked" : "" # /> #}# ${siteCode}
         </label>
     </script>
     <script id="lv-site-Direc-template" type="text/x-kendo-template">

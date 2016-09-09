@@ -19,29 +19,54 @@
             });
 
             JBs.fetch(function() {
-                //console.log("#### JBs Fetch ##### ");
+                // console.log("#### JBs Fetch ##### ");
+                // console.log(app.jobService.viewModel.get("selectItem").status);
                 var view = JBs.view();
                 var selectItem
                 if (view[0] == undefined) {
                     selectItem = app.jobService.viewModel.get("selectItem");
+                    // console.log(JSON.stringify(app.jobService.viewModel.get("selectItem")));
                 } else {
-                    selectItem = view[0];
+                    // selectItem = app.jobService.viewModel.get("selectItem");
+                    selectItem = view[0]; //Save More No Data Cr.MOO 20160830
+                    // console.log(JSON.stringify(view[0]));
                 }
                 var jobId = selectItem.jobId;
                 var statusId = pStatus;
                 var newStatus = pStatus;
-                var oldStatus = selectItem.statusId;
-                var report = selectItem.report;
-                var reasonOverdue = "";
-                //jigkoh3 add remarkOverDue 19/11/2015
-                var remarkOverDue = selectItem.remarkOverDue;
+                var oldStatus
+                if (that.get("oStatus") == "OK") {
+                    that.set("oStatus", that.get("selectedStatus"));
+                    oldStatus = selectItem.statusId;
+                } else if (that.get("oStatus") != null && that.get("oStatus") != "OK" && that.get("oStatus") != pStatus) {
+                    oldStatus = that.get("oStatus");
+                    that.set("oStatus", that.get("selectedStatus"));
+                } else {
+                    oldStatus = selectItem.statusId;
+                }
 
-                var reportTypeId = "";
-                var reportType = "";
+                if (app.jobService.viewModel.get("selectItem") == null) {
+                    var report = selectItem.report;
+                    var reasonOverdue = selectItem.reasonOverdueDesc;
+                    //jigkoh3 add remarkOverDue 19/11/2015
+                    var remarkOverDue = selectItem.remarkOverDue;
+                    var reportTypeId = selectItem.reportTypeId;
+                    var reportType = selectItem.reportType;
+                    var trId = selectItem.trId;
+                    var faultAlarmNumber = selectItem.faultAlarmNumber;
+                } else {
+                    var report = app.jobService.viewModel.get("selectItem").report;
+                    var reasonOverdue = app.jobService.viewModel.get("selectItem").reasonOverdueDesc;
+                    //jigkoh3 add remarkOverDue 19/11/2015
+                    var remarkOverDue = app.jobService.viewModel.get("selectItem").remarkOverDue;
+                    var reportTypeId = app.jobService.viewModel.get("selectItem").reportTypeId;
+                    var reportType = app.jobService.viewModel.get("selectItem").reportType;
+                    var trId = app.jobService.viewModel.get("selectItem").trId;
+                    var faultAlarmNumber = app.jobService.viewModel.get("selectItem").faultAlarmNumber;
+                }
 
 
                 var ttId = selectItem.ttId;
-                var trId = selectItem.trId;
                 var jbLat = selectItem.latitude;
                 var jbLong = selectItem.longtitude;
                 var updateDate = moment().unix() * 1000;
@@ -53,7 +78,7 @@
                     aamShow = selectItem.aamShow;
                 }
 
-                var faultAlarmNumber = selectItem.faultAlarmNumber;
+
 
                 var problemCause = null;
                 var problemSolve = null;
@@ -64,7 +89,7 @@
 
                 if (pStatus == "05" && selectItem.statusId != "10") {
 
-                    var reasonOverdue = selectItem.reasonOverdueId;
+                    // var reasonOverdue = app.jobService.viewModel.get("selectItem").reasonOverdueDesc;
                     var reportTypeId = app.jobService.viewModel.get("jobReportType");
 
                     if (selectItem.reportType == "01") {
