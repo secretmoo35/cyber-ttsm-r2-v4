@@ -47,7 +47,8 @@
 
                 if (app.jobService.viewModel.get("selectItem") == null) {
                     var report = selectItem.report;
-                    var reasonOverdue = selectItem.reasonOverdueDesc;
+                    var reasonOverdue = selectItem.reasonOverdueId;
+                    // reasonOverdueDesc
                     //jigkoh3 add remarkOverDue 19/11/2015
                     var remarkOverDue = selectItem.remarkOverDue;
                     var reportTypeId = selectItem.reportTypeId;
@@ -56,7 +57,7 @@
                     var faultAlarmNumber = selectItem.faultAlarmNumber;
                 } else {
                     var report = app.jobService.viewModel.get("selectItem").report;
-                    var reasonOverdue = app.jobService.viewModel.get("selectItem").reasonOverdueDesc;
+                    var reasonOverdue = app.jobService.viewModel.get("selectItem").reasonOverdueId;
                     //jigkoh3 add remarkOverDue 19/11/2015
                     var remarkOverDue = app.jobService.viewModel.get("selectItem").remarkOverDue;
                     var reportTypeId = app.jobService.viewModel.get("selectItem").reportTypeId;
